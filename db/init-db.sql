@@ -1,0 +1,21 @@
+CREATE DATABASE MIBASEDEDATOS;
+GO
+
+USE MIBASEDEDATOS;
+
+CREATE TABLE Persona (
+  Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+  Nombre NVARCHAR(50),
+  [Fecha] DATETIMEOFFSET,
+  CreatedAt DATETIMEOFFSET NOT NULL, 
+  UpdatedAt DATETIMEOFFSET NOT NULL
+);
+
+INSERT INTO Persona (Nombre, [Date], CreatedAt, UpdatedAt) VALUES
+(N'Andrés ', '2020-06-21', GETDATE(), GETDATE()),
+(N'Andrés Felipe', '2020-06-22', GETDATE(), GETDATE()),
+(N'Andrés Felipe Naranjo', '2020-06-23', GETDATE(), GETDATE()),
+(N'Andrés Felipe Naranjo Quintero', '2020-06-24', GETDATE(), GETDATE())
+
+
+SELECT * FROM MIBASEDEDATOS.dbo.Persona;
