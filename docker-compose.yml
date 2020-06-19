@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+      
+  bb-db:
+    build:
+      context: ./db
+    ports:
+      - "1433:1433" 
+    restart: always        
+    networks:
+      - bb-net
+
+networks:
+  bb-net:
