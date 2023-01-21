@@ -1,4 +1,4 @@
-FROM microsoft/mssql-server-linux:2017-CU1
+FROM mcr.microsoft.com/mssql/server:2017-latest
 
 ENV ACCEPT_EULA=Y \
     MSSQL_SA_PASSWORD=quintero1.
